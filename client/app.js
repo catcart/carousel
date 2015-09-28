@@ -1,14 +1,23 @@
-//$(function(){
-//    $.ajax({
-//        url:"/getColorData"
-//    }).done(function(response){
-//        var colorVal = response;
-//        console.log(response);
-//        for(var iterator = 0; iterator < colorVal.length; iterator++){
-//            console.log(colorVal[iterator]);
-//
-//            var $content = ("<p style='color:" + colorVal[iterator].value + "'>" + colorVal[iterator].color + "<//p>");
-//            $(".content-placeholder").append($content);
-//        }
-//    })
-//})
+$(function() {
+
+    $(function() {
+        $.ajax({
+            url:"/getcarouselData"
+        }).done(function(response) {
+            console.log(response);
+
+            for (var i = 0; i < response.length; i++) {
+                var active = "";
+                if (i == 0) {
+                    active = " active";
+                }
+                var slide = "<div class='item" + active + "'><p>" + response[i].name + "</p><p>" + response[i].description + "</p><p>" + response[i].shoutout + "</p></div>"
+                $(".carousel-inner").append(slide);
+                $(".carousel-indicators").append("<li data-target='#carousel-example-generic' data-slide-to='" + i + "' class='" + active + "'></li>");
+            }
+
+            $('.carousel').carousel();
+
+        });
+    });
+});

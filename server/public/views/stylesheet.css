@@ -1,0 +1,25 @@
+body {
+    font-family: helvetica, sans-serif;
+    font-size: 32px;
+    color: ;
+    background-color: #166965;
+    margin: 20px;
+    align-items: center;
+}
+h1  {
+    color: #72051B;
+    font-size: 54px;
+    font-family: Menlo;
+}
+#carousel-example-generic {
+    color: #0d3349;
+    margin: 30px;
+    display: block;
+
+}
+.glyphicon {
+    color: #693147;
+}
+ol  {
+   width: 100%;
+}

@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
+    // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                //banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
                 src: 'client/app.js',
@@ -17,9 +18,12 @@ module.exports = function(grunt) {
                 src: [
                     "jquery/dist/jquery.min.js",
                     "jquery/dist/jquery.min.map",
-                    "bootstrap/dist/css/bootstrap.css",
-                    "bootstrap/dist/css/boostrap",
-                    "bootstrap/dist/js/bootstrap.min.js"
+                    "bootstrap/dist/js/bootstrap.min.js",
+                    "bootstrap/dist/css/bootstrap.min.css",
+                    "bootstrap/dist/css/bootstrap-theme.min.css",
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.ttf",
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"
                 ],
                 "dest": "server/public/vendor/"
             }
